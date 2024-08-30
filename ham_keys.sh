@@ -74,7 +74,7 @@ games[7, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[7, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 
 games[8, name]="Gangs Wars"
-games[8, appToken]="c7821fa7-6632-482c-9635-2bd5798585f9"
+games[8, appToken]="b6de60a0-e030-48bb-a551-548372493523"
 games[8, promoId]="c7821fa7-6632-482c-9635-2bd5798585f9"
 
 games[9, name]="Cafe Dash"
