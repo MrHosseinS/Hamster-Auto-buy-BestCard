@@ -45,9 +45,9 @@ PROXY_FILE="proxy.txt"
 
 # Games
 declare -A games
-games[1, name]="Riding Extreme 3D"
-games[1, appToken]="d28721be-fd2d-4b45-869e-9f253b554e50"
-games[1, promoId]="43e35910-c168-4634-ad4f-52fd764a843f"
+games[1, name]="Zoopolis"
+games[1, appToken]="b2436c89-e0aa-4aed-8046-9b0515e1c46b"
+games[1, promoId]="b2436c89-e0aa-4aed-8046-9b0515e1c46b"
 
 games[2, name]="Chain Cube 2048"
 games[2, appToken]="d1690a07-3780-4068-810f-9b5bbf2931b2"
@@ -73,9 +73,9 @@ games[7, name]="Mow and Trim"
 games[7, appToken]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 games[7, promoId]="ef319a80-949a-492e-8ee0-424fb5fc20a6"
 
-games[8, name]="Mud Racing"
-games[8, appToken]="8814a785-97fb-4177-9193-ca4180ff9da8"
-games[8, promoId]="8814a785-97fb-4177-9193-ca4180ff9da8"
+games[8, name]="Gangs Wars"
+games[8, appToken]="c7821fa7-6632-482c-9635-2bd5798585f9"
+games[8, promoId]="c7821fa7-6632-482c-9635-2bd5798585f9"
 
 games[9, name]="Cafe Dash"
 games[9, appToken]="bc0971b8-04df-4e72-8a3e-ec4dc663cd11"
