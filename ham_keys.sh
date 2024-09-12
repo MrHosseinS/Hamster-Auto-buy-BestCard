@@ -85,6 +85,10 @@ games[10, name]="Stone Age"
 games[10, appToken]="04ebd6de-69b7-43d1-9c4b-04a6ca3305af"
 games[10, promoId]="04ebd6de-69b7-43d1-9c4b-04a6ca3305af"
 
+games[11, name]="Bouncemasters"
+games[11, appToken]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
+games[11, promoId]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
