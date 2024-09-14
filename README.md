@@ -1,5 +1,7 @@
 # Hamster-Auto-buy-BestCard & AutoClicker $ Get keys 🔑 
 
+(Tutorial YouTube)[https://youtu.be/bXND1sElZuc]
+
 ## Auto buy
 ```
 bash <(curl -fsSL https://raw.githubusercontent.com/Ptechgithub/Hamster-Auto-buy-BestCard/main/install.sh)
