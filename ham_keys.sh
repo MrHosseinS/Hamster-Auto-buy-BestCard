@@ -90,8 +90,8 @@ games[11, appToken]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
 games[11, promoId]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
 
 games[12, name]="Hide Ball"
-games[12, appToken]="bf4966c-4d22-439b-8ff2-dc5ebca1a600"
-games[12, promoId]="bf4966c-4d22-439b-8ff2-dc5ebca1a600"
+games[12, appToken]="4bf4966c-4d22-439b-8ff2-dc5ebca1a600"
+games[12, promoId]="4bf4966c-4d22-439b-8ff2-dc5ebca1a600"
 
 # Proxys
 load_proxies() {
