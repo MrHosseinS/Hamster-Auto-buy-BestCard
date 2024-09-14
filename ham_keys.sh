@@ -89,6 +89,10 @@ games[11, name]="Bouncemasters"
 games[11, appToken]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
 games[11, promoId]="bc72d3b9-8e91-4884-9c33-f72482f0db37"
 
+games[12, name]="Hide Ball"
+games[12, appToken]="bf4966c-4d22-439b-8ff2-dc5ebca1a600"
+games[12, promoId]="bf4966c-4d22-439b-8ff2-dc5ebca1a600"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -220,7 +224,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..11}; do
+		for game_choice in {1..12}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
