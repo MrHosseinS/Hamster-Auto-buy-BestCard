@@ -93,6 +93,10 @@ games[12, name]="Hide Ball"
 games[12, appToken]="4bf4966c-4d22-439b-8ff2-dc5ebca1a600"
 games[12, promoId]="4bf4966c-4d22-439b-8ff2-dc5ebca1a600"
 
+games[13, name]="Pin Out Master"
+games[13, appToken]="d2378baf-d617-417a-9d99-d685824335f0"
+games[13, promoId]="d2378baf-d617-417a-9d99-d685824335f0"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -224,7 +228,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..12}; do
+		for game_choice in {1..13}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
