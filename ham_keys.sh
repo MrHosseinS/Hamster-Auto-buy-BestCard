@@ -105,6 +105,10 @@ games[15, name]="Infected Frontier"
 games[15, appToken]="eb518c4b-e448-4065-9d33-06f3039f0fcb"
 games[15, promoId]="eb518c4b-e448-4065-9d33-06f3039f0fcb"
 
+games[15, name]="Among Water"
+games[15, appToken]="daab8f83-8ea2-4ad0-8dd5-d33363129640"
+games[15, promoId]="daab8f83-8ea2-4ad0-8dd5-d33363129640"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -236,7 +240,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..15}; do
+		for game_choice in {1..16}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
