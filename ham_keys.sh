@@ -101,6 +101,10 @@ games[14, name]="Count Masters"
 games[14, appToken]="4bdc17da-2601-449b-948e-f8c7bd376553"
 games[14, promoId]="4bdc17da-2601-449b-948e-f8c7bd376553"
 
+games[15, name]="Infected Frontier"
+games[15, appToken]="eb518c4b-e448-4065-9d33-06f3039f0fcb"
+games[15, promoId]="eb518c4b-e448-4065-9d33-06f3039f0fcb"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -232,7 +236,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..14}; do
+		for game_choice in {1..15}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
