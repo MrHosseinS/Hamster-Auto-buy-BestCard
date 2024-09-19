@@ -109,6 +109,10 @@ games[16, name]="Among Water"
 games[16, appToken]="daab8f83-8ea2-4ad0-8dd5-d33363129640"
 games[16, promoId]="daab8f83-8ea2-4ad0-8dd5-d33363129640"
 
+games[17, name]="Factory World"
+games[17, appToken]="d02fc404-8985-4305-87d8-32bd4e66bb16"
+games[17, promoId]="d02fc404-8985-4305-87d8-32bd4e66bb16"
+
 # Proxys
 load_proxies() {
 	if [[ -f "$1" ]]; then
@@ -240,7 +244,7 @@ main() {
 	load_proxies "$PROXY_FILE"
 
 	while true; do
-		for game_choice in {1..16}; do
+		for game_choice in {1..17}; do
 			if [[ ${#proxies[@]} -gt 0 ]]; then
 				proxy=${proxies[RANDOM % ${#proxies[@]}]}
 			else
