@@ -68,15 +68,32 @@ read -r min_balance_threshold
 total_spent=0
 total_profit=0
 
+# Define headers in an array
+headers=(
+    -H 'accept: */*'
+    -H 'accept-language: en-US,en;q=0.9'
+    -H "authorization: $Authorization"
+    -H 'cache-control: no-cache'
+    -H 'content-length: 0'
+    -H 'origin: https://hamsterkombatgame.io'
+    -H 'pragma: no-cache'
+    -H 'priority: u=1, i'
+    -H 'referer: https://hamsterkombatgame.io/'
+    -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"'
+    -H 'sec-ch-ua-mobile: ?1'
+    -H 'sec-ch-ua-platform: "Android"'
+    -H 'sec-fetch-dest: empty'
+    -H 'sec-fetch-mode: cors'
+    -H 'sec-fetch-site: same-site'
+    -H 'user-agent: Mozilla/5.0 (Linux; Android 10; SM-G960F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.91 Mobile Safari/537.36'
+)
+
 # Function to purchase upgrade
 purchase_upgrade() {
     upgrade_id="$1"
     timestamp=$(date +%s%3N)
-    response=$(curl -s -X POST \
+    response=$(curl -s -X POST "${headers[@]}" \
       -H "Content-Type: application/json" \
-      -H "Authorization: $Authorization" \
-      -H "Origin: https://hamsterkombat.io" \
-      -H "Referer: https://hamsterkombat.io/" \
       -d "{\"upgradeId\": \"$upgrade_id\", \"timestamp\": $timestamp}" \
       https://api.hamsterkombatgame.io/interlude/buy-upgrade)
     echo "$response"
@@ -84,17 +101,7 @@ purchase_upgrade() {
 
 # Function to get the best upgrade item
 get_best_item() {
-    curl -s -X POST -H "User-Agent: Mozilla/5.0 (Android 12; Mobile; rv:102.0) Gecko/102.0 Firefox/102.0" \
-        -H "Accept: */*" \
-        -H "Accept-Language: en-US,en;q=0.5" \
-        -H "Referer: https://hamsterkombat.io/" \
-        -H "Authorization: $Authorization" \
-        -H "Origin: https://hamsterkombat.io" \
-        -H "Connection: keep-alive" \
-        -H "Sec-Fetch-Dest: empty" \
-        -H "Sec-Fetch-Mode: cors" \
-        -H "Sec-Fetch-Site: same-site" \
-        -H "Priority: u=4" \
+    curl -s -X POST "${headers[@]}" \
         https://api.hamsterkombatgame.io/interlude/upgrades-for-buy | jq -r '.upgradesForBuy | map(select(.isExpired == false and .isAvailable)) | map(select(.profitPerHourDelta != 0 and .price != 0)) | sort_by(-(.profitPerHourDelta / .price))[:1] | .[0] | {id: .id, section: .section, price: .price, profitPerHourDelta: .profitPerHourDelta, cooldownSeconds: .cooldownSeconds}'
 }
 
@@ -127,10 +134,7 @@ main() {
         echo ""
 
         # Get current balanceCoins
-        current_balance=$(curl -s -X POST \
-            -H "Authorization: $Authorization" \
-            -H "Origin: https://hamsterkombat.io" \
-            -H "Referer: https://hamsterkombat.io/" \
+        current_balance=$(curl -s -X POST "${headers[@]}" \
             https://api.hamsterkombatgame.io/interlude/sync | jq -r '.interludeUser.balanceDiamonds')
 
         # Check if current balance is above the threshold after purchase
