@@ -73,15 +73,14 @@ headers=(
     -H 'content-type: application/json'
     -H 'origin: https://hamsterkombatgame.io'
     -H 'pragma: no-cache'
-    -H 'priority: u=1, i'
     -H 'referer: https://hamsterkombatgame.io/'
-    -H 'sec-ch-ua: "Chromium";v="128", "Not;A=Brand";v="24", "Google Chrome";v="128"'
-    -H 'sec-ch-ua-mobile: ?0'
-    -H 'sec-ch-ua-platform: "Windows"'
+    -H 'sec-ch-ua: "Android";v="12", "Chromium";v="128", "Google Chrome";v="128"'
+    -H 'sec-ch-ua-mobile: ?1'
+    -H 'sec-ch-ua-platform: "Android"'
     -H 'sec-fetch-dest: empty'
     -H 'sec-fetch-mode: cors'
     -H 'sec-fetch-site: same-site'
-    -H 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36'
+    -H 'user-agent: Mozilla/5.0 (Linux; Android 12; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36'
 )
 
 # Variables to keep track of total spent and total profit
